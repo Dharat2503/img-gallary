@@ -1,8 +1,9 @@
 
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import '../pages/Home.css';
 
-const services = [
+const initialServices = [
   {
     name: "Retail, E-Commerce",
     image: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
@@ -54,9 +55,19 @@ const services = [
     isOverlay: true 
   },
 
+
+
 ];
 
 const Home3 = () => {
+  const [services, setServices] = useState(initialServices);
+
+
+
+  useEffect(() => {
+
+  }, [services]);
+
   return (
     <section className="service_section" id="service_section">
       <div className="container">
@@ -74,9 +85,10 @@ const Home3 = () => {
                   className={`service_box ${service.isOverlay ? 'overlay' : ''}`}
                   style={{ backgroundImage: `url(${service.image})` }}
                 >
-                  <span >{service.name}</span>
+                  <span>{service.name}</span>
                 </div>
               ))}
+         
             </div>
           </div>
         </div>
