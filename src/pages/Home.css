@@ -1,28 +1,4 @@
 
-.service_section {
-  margin-top: 8vh;
-}
-
-.service_section .service_area {
-  text-align: center;
-  padding: 20px;
-}
-
-.service_section .service_area h4 {
-  color: #0A1828;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 57px;
-  margin-bottom: 25px;
-}
-
-.service_section .service_area p {
-  color: #636365;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 28px;
-  margin-bottom: 20px;
-}
 
 .services_grid {
   display: flex;
@@ -33,12 +9,12 @@
   margin: 35px auto;
 }
 
-
 .service_box {
   display: flex;
   align-items: flex-end;
   min-height: 290px;
-  min-width: 150px; /* Set a minimum width for the boxes */
+  max-width: 260px; 
+  width: calc((100% - 30px) / 4); /* /4 thi 4 img aavse */
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease;
   z-index: 1;
@@ -76,10 +52,12 @@
 }
 
 
-
-/* Responsive adjustments */
 @media only screen and (max-width: 768px) {
   .services_grid {
     justify-content: flex-start;
+  }
+  .service_box {
+    width: calc(50% - 10px); /* 2 img batave phn ma */
+    min-height: 200px; 
   }
 }
