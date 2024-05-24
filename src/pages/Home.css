@@ -90,3 +90,26 @@
     margin-left: 210%;
   }
   
+
+@media only screen and (max-width: 768px) {
+    .services_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .services_grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .service_section .service_area h4 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  
+    .service_section .service_area p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  
